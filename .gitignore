@@ -1,5 +1,6 @@
 *.*
 !.gitignore
-!.cs
-!.md
-!.txt
+!*.cs
+!*.md
+!*.txt
+!*.py

@@ -19,16 +19,11 @@ int get_decimal_input(){
 }
 // Старт
 WriteLine("Задача 4");
-// Декларируем вводный буфер//obsolete
-// начало цикла//obsolete
-// дали число? //obsolete
-// да: выход//obsolete
+
 // декларируем лимит шага по тз
 int step_limit;
 // декларируем шаг
 int step;
-// Декларируем нулевой индекс
-int index=0;
 // Приглашение ко вводу
 
 // Число больше нуля?
@@ -42,27 +37,9 @@ else
 {
     step=1;
 }
-int last_element_index;
-if (step_limit%2==0)
+for (index=1;index!=step_limit+step;index=index+step)
 {
-    last_element_index=step_limit;
-}
-else
-{
-    if (step_limit<0)
-    {
-        last_element_index=step_limit--;
-    }
-    else
-    {
-        last_element_index=step_limit++;
-    }
-}
-WriteLine("");
-WriteLine(String.Concat("step=",step));
-for (index=0;index!=step_limit;index=index+step)
-{
-    if (index!=last_element_index)
+    if (index!=step_limit) 
     {
         if (index%2==0) Write(String.Concat(index,", "));
     }
@@ -71,7 +48,6 @@ for (index=0;index!=step_limit;index=index+step)
         if (index%2==0) Write(index);
     }
 }
-// if (step_limit%2==0) Write(step_limit);
 // начало цикла: 
 // Индекс больше лимита?
 // да: выход

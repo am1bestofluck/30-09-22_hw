@@ -31,7 +31,6 @@ while (!correct_number)
     correct_number = int.TryParse(buffer_i, out buffer_m);
     if (correct_number) break;
 }
-WriteLine("1!!");
 //          задаем его как максимум
 //          *задаем его как минимум
 buffer_m=Int32.Parse(buffer_i);

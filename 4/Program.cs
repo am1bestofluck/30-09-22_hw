@@ -24,6 +24,7 @@ WriteLine("Задача 4");
 int step_limit;
 // декларируем шаг
 int step;
+int index;
 // Приглашение ко вводу
 
 // Число больше нуля?
@@ -37,9 +38,18 @@ else
 {
     step=1;
 }
+int last_viable_index;
+if (step_limit%2==0)
+{
+    last_viable_index=step_limit;
+}
+else
+{
+    last_viable_index=step_limit-step;
+}
 for (index=1;index!=step_limit+step;index=index+step)
 {
-    if (index!=step_limit) 
+    if (index!=last_viable_index) 
     {
         if (index%2==0) Write(String.Concat(index,", "));
     }
@@ -48,11 +58,6 @@ for (index=1;index!=step_limit+step;index=index+step)
         if (index%2==0) Write(index);
     }
 }
-// начало цикла: 
-// Индекс больше лимита?
-// да: выход
-// нет : индекс четный?
-// Да :печатаем индекс 
-// Индекс+шаг
-// Финиш
 WriteLine("\n\nНу алгоритм Я конечно написал, но он, как бы помягче сказать, \"не пригодился\".");
+WriteLine("Передаю пламенный привет отсутвию запятой после последнего элементом. Гори в аду:).");
+WriteLine("Если шагаем назад, то 0 появляется в выдаче, потому что в задании явно указано что шагать нужно от +1.");

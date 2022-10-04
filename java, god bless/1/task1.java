@@ -18,9 +18,15 @@ class task1{
         int max_o=number0;
         System.out.println("Введи число плз");
         int number1=Integer.parseInt(get_int_string.nextLine());
-        System.out.println(number0);
-        System.out.println(number1);
         get_int_string.close();
+        if (number1>max_o){
+                max_o=number1;
+        }
+        if (number1<min_o){
+                min_o=number1;
+        }
+        System.out.println("minimal value= "+min_o);
+        System.out.println("maximal value= "+max_o);
         
 //  Декларируем условный максимум
 //  *декларируем условный минимум
